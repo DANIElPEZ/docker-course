@@ -1,0 +1,6 @@
+# download image
+FROM nginx:latest
+
+#copy and paste folder from pc to image
+# path: /usr/share/nginx/html
+COPY . /usr/share/nginx/html
