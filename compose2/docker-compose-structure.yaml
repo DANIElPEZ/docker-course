@@ -1,0 +1,21 @@
+services:
+  web:
+    build: ./path-to-dockerfile
+    image: imageName
+    ports:
+      - "hostport:containerport"
+    volumes:
+      - ./current-directory:/usr/share/nginx/html
+    environment:
+      - name=value
+    networks:
+      - networkName
+    depends_on:
+      - neccesary-service
+
+networks:
+  name:
+    driver: bridge
+
+volumes:
+  name:

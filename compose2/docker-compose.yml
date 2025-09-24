@@ -1,0 +1,21 @@
+services:
+  proxy:
+    build: ./proxy
+    ports:
+      - "8080:80"
+    networks:
+      - balance
+
+  sitio1:
+    networks:
+      - balance
+    build: ./sitio1
+
+  sitio2:
+    networks:
+      - balance
+    build: ./sitio2
+
+networks:
+  balance:
+    driver: bridge
